@@ -26,8 +26,15 @@ public class HelloServlet extends HttpServlet {
   - 기본 사용법, Header 조회
   - HTTP 요청 메시지 바디 조회
     - GET -쿼리 파라미터
+      <br>복수 파라미터에서 단일 파라미터 조회<br>
+      request.getParameter() 는 하나의 파라미터 이름에 대해서 단 하나의 값만 있을 때 사용해야 한다.
+      <br> if. 중복일 때는 request.getParameterValues() 를 사용해야 한다.
+      <br> 참고로 이렇게 중복일 때 request.getParameter() 를 사용하면 request.getParameterValues() 의
+      첫 번째 값을 반환한다<br>
+      <br>
     - POST - HTML Form
     - HTTP API - MessageBody -> Postman 테스트
+    <br> http 요청 데이터에 message body 에 내가 원하는 데이터를 직접 담아서 요청
 - HttpServletResponse
   - 기본 사용법, Header 조회
   - HTTP 응답 메시지 바디 조회
